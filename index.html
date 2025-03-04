@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro Timer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="welcome-message">
+        <h2>Welcome to the Pomodoro Timer! ⏳</h2>
+        <p>Boost your productivity with focused work sessions and timed breaks.</p>
+        <p>Set your timer, stay on track, and get things done efficiently!</p>
+    </div>
+    
+    <div class="container">
+        <h1>Pomodoro Timer</h1>
+
+        <div class="clock-container">
+            <svg class="progress-ring" width="180" height="180">
+                <circle class="progress-ring-bg" cx="90" cy="90" r="80"></circle>
+                <circle class="progress-ring-circle" cx="90" cy="90" r="80"></circle>
+            </svg>
+            <div id="countdown">25:00</div>
+        </div>
+
+        <div class="controls">
+            <input type="number" id="custom-time" min="1" max="60" value="25">
+            <button id="start">Start</button>
+            <button id="end">Pause</button>
+            <button id="reset">Reset</button>
+        </div>
+
+        <div class="break-controls">
+            <button id="shortBreak">Short Break</button>
+            <button id="longBreak">Long Break</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

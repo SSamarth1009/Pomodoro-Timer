@@ -1,14 +1,14 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const timerDisplay = document.getElementById("countdown"); // Corrected selector
+    const timerDisplay = document.getElementById("countdown"); 
     const customTimeInput = document.getElementById("custom-time");
     const startButton = document.getElementById("start");
     const endButton = document.getElementById("end");
     const resetButton = document.getElementById("reset");
     const shortBreakButton = document.getElementById("shortBreak");
-    const longBreakButton = document.getElementById("longBreak"); // Fixed ID typo
+    const longBreakButton = document.getElementById("longBreak"); 
 
     let timer;
-    let timeLeft = 1500; // Default 25 minutes
+    let timeLeft = 1500; 
     let isRunning = false;
 
     function updateDisplay() {
@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function startTimer(duration) {
-        if (isRunning) return; // Prevent multiple timers
+        if (isRunning) return;
 
         timeLeft = duration * 60;
         isRunning = true;
@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function resetTimer() {
         stopTimer();
-        timeLeft = customTimeInput.value ? customTimeInput.value * 60 : 1500; // Default 25 min
+        timeLeft = customTimeInput.value ? customTimeInput.value * 60 : 1500;
         updateDisplay();
     }
 
@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     startButton.addEventListener("click", () => {
-        let duration = customTimeInput.value || 25; // Default 25 min
+        let duration = customTimeInput.value || 25;
         startTimer(duration);
     });
 
